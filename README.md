@@ -18,11 +18,15 @@ $ brew install kubernetes-cli
 ## Kubernetes cluster
 
 ```zsh
-$ minikube start --keep-context --kubernetes-version=v1.18.3
+$ minikube start \
+    --keep-context \
+    --kubernetes-version=v1.18.3 \
+    --disk-size='10g'
 ```
 
 * --keep-context : This will keep the existing kubectl context and will create a minikube context.
 * --kubernetes-version=v1.18.3 : 2020.06.15 기준 최신의 k8s version.
+* --disk-size='10g'
 
 ```zsh
 $ kubectl config use-context minikube
